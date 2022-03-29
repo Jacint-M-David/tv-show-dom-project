@@ -53,7 +53,7 @@ const render = (renderedList) => {
   renderedList.forEach(episode => {
 
     let option = document.createElement("option");
-    option.value = episode.name;
+    option.value = episode.id;
     option.innerText = `${episodeCode(episode)} - ${episode.name}`;
     
     select.append(option);
@@ -77,17 +77,26 @@ const render = (renderedList) => {
     title.innerText = `${item.name}\n(${episodeCode(item)})`;
     img.src = item.image.medium;
     description.innerHTML = item.summary;
-
+    
     // ADD CLASSES
     div.classList.add("epDiv");
     title.classList.add("epTitle");
     img.classList.add("epImg");
     description.classList.add("epDescription");
+    
+    // ADD ID
+    div.setAttribute('id',item.id);
 
     // APPEND
     div.append(title, img, description);
     rootElem.append(div);
   });
+}
+
+const selectEpisode = () => {
+  let episode = select.value;
+  console.log(episode);
+  window.location.href = `#${episode}`;
 }
 
 window.onload = setup;

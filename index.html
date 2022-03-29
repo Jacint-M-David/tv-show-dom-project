@@ -12,7 +12,8 @@
     <fieldset>
       <div class="inp">
         <label for="selectEpisode">Select Episode</label>
-        <select name="selectEpisode" id="selectEpisode">
+        <select onChange="selectEpisode()" name="selectEpisode" id="selectEpisode">
+        
             <!-- Dynamically Added List -->
 
         </select>
@@ -31,6 +32,6 @@
 
     <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
-    <footer>All the show data has been provided by <a href="https://www.tvmaze.com/">TVMaze</a></footer>
+    <footer id="footer">All the show data has been provided by <a href="https://www.tvmaze.com/">TVMaze</a></footer>
   </body>
 </html>
