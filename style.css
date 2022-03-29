@@ -1,7 +1,8 @@
 body {
-  background-color: lightcyan;
-  /* background-color: #efb28c;*/
+  /* background-color: lightcyan; */
+  background-color: #f4974f;
   /* background-color: #ff7f50; */
+  /* background-color: #d1001c; */
 }
 
 #root {
@@ -21,11 +22,16 @@ font-weight: bold;
 background-color: rgb(67, 140, 140);
 border-radius: 25px;
 border: 2px solid white;
+/* text-align: center; */
 }
 
 input {
   margin: 5px;
   border-radius: 5px;
+}
+
+label {
+  margin-right: .125rem;
 }
 
 .epDiv {

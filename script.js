@@ -1,7 +1,8 @@
 const allEpisodes = getAllEpisodes(),
 rootElem = document.getElementById("root"),
 searchBar = document.getElementById("searchBar"),
-matches = document.getElementById("matches");
+matches = document.getElementById("matches"),
+select = document.getElementById("selectEpisode");
 
 //You can edit ALL of the code here
 function setup() {
@@ -41,15 +42,25 @@ const minTwoDigits = (num) => {
 const episodeCode = (item) => {
   const S = minTwoDigits(item.season),
   E = minTwoDigits(item.number);
-  return `(S${S}E${E})`;
+  return `S${S}E${E}`;
   
 }
 
 const render = (renderedList) => {
   
-  let numberOfAllEpisodes = getAllEpisodes().length;
+  // SELECT EPISODE
+  select.replaceChildren();
+  renderedList.forEach(episode => {
 
+    let option = document.createElement("option");
+    option.value = episode.name;
+    option.innerText = `${episodeCode(episode)} - ${episode.name}`;
+    
+    select.append(option);
+  })
+  
   // DISPLAY NUMBER OF MATCHES
+  let numberOfAllEpisodes = getAllEpisodes().length;
   matches.innerText = "Currently showing " + renderedList.length + " episodes out of the " + numberOfAllEpisodes + " total.";
   console.log(searchBar.value);
 
@@ -63,7 +74,7 @@ const render = (renderedList) => {
     description = document.createElement("p");
 
     // FILL WITH CONTENT
-    title.innerText = `${item.name}\n${episodeCode(item)}`;
+    title.innerText = `${item.name}\n(${episodeCode(item)})`;
     img.src = item.image.medium;
     description.innerHTML = item.summary;
 

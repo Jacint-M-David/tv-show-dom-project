@@ -10,9 +10,18 @@
 
   <body>
     <fieldset>
-    <hero>Live Search</hero>
-    <input id="searchBar" name="searchBar" type="search" placeholder="" onkeyup="searchCollection()" />
-    <span id="matches"></span>
+      <div class="inp">
+        <label for="selectEpisode">Select Episode</label>
+        <select name="selectEpisode" id="selectEpisode">
+            <!-- Dynamically Added List -->
+
+        </select>
+      </div>
+      <div class="inp">
+        <label for="searchBar">Live Search</label>
+        <input id="searchBar" name="searchBar" type="search" placeholder="type here to search" onkeyup="searchCollection()" />
+      </div>
+      <span id="matches"></span>
   </fieldset>
     <div id="root">
     </div>
