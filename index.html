@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <fieldset>
+    <hero>Live Search</hero>
+    <input id="searchBar" name="searchBar" type="search" placeholder="" onkeyup="searchCollection()" />
+    <span id="matches"></span>
+  </fieldset>
     <div id="root">
     </div>
 
@@ -17,5 +22,6 @@
 
     <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
+    <footer>All the show data has been provided by <a href="https://www.tvmaze.com/">TVMaze</a></footer>
   </body>
 </html>

@@ -1,3 +1,56 @@
+body {
+  background-color: lightcyan;
+  /* background-color: #efb28c;*/
+  /* background-color: #ff7f50; */
+}
+
 #root {
-  color: red;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 20px;
+  margin: auto;
+  justify-content: center;
+}
+
+fieldset {
+margin: 20px;
+/* text-align: center; */
+color: white;
+font-weight: bold;
+background-color: rgb(67, 140, 140);
+border-radius: 25px;
+border: 2px solid white;
+}
+
+input {
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.epDiv {
+  display: inline-block;
+  background-color: rgb(67, 140, 140);
+  border-radius: 25px;
+  text-align: center;
+  border: 2px solid white;
+}
+
+.epTitle {
+  padding: 0 5px;
+  font-size: 1.5rem;
+}
+
+.epDescription {
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+.epImg {
+  border-radius: 2.5px;
+  width: 100%;
+}
+
+footer {
+  margin-top: 1rem;
 }
