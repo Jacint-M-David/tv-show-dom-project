@@ -1,8 +1,9 @@
 body {
   /* background-color: lightcyan; */
-  background-color: #f4974f;
+  /* background-color: #f4974f; */
   /* background-color: #ff7f50; */
   /* background-color: #d1001c; */
+  background-color: #ffbb00;
 }
 
 #root {
@@ -15,14 +16,14 @@ body {
 }
 
 fieldset {
-margin: 20px;
-/* text-align: center; */
-color: white;
-font-weight: bold;
-background-color: rgb(67, 140, 140);
-border-radius: 25px;
-border: 2px solid white;
-/* text-align: center; */
+  margin: 20px;
+  /* text-align: center; */
+  color: white;
+  font-weight: bold;
+  background-color: rgb(67, 140, 140);
+  border-radius: 25px;
+  border: 2px solid white;
+  /* text-align: center; */
 }
 
 input {
@@ -31,7 +32,7 @@ input {
 }
 
 label {
-  margin-right: .125rem;
+  margin-right: 0.125rem;
 }
 
 .epDiv {
@@ -40,6 +41,7 @@ label {
   border-radius: 25px;
   text-align: center;
   border: 2px solid white;
+  box-shadow: 5px 5px 5px 5px rgb(167, 122, 0);
 }
 
 .epTitle {
