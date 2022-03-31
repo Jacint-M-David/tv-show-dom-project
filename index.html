@@ -3,19 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | My Name (My GitHub username)</title>
+    <title>TV Show Project | Jacint M. David (Jacint-M-David)</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
+    <fieldset>
+      <div class="inp">
+        <label for="selectEpisode">Select Episode</label>
+        <select onChange="selectEpisode()" name="selectEpisode" id="selectEpisode">
+        
+            <!-- Dynamically Added List -->
+
+        </select>
+      </div>
+      <div class="inp">
+        <label for="searchBar">Live Search</label>
+        <input id="searchBar" name="searchBar" type="search" placeholder="type here to search" onkeyup="searchCollection()" />
+      </div>
+      <span id="matches"></span>
+  </fieldset>
     <div id="root">
     </div>
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
 
     <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
+    <footer id="footer">All the show data has been provided by <a href="https://www.tvmaze.com/">TVMaze</a></footer>
   </body>
 </html>
